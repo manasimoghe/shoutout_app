@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoutout App with REST API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            font-size: 16px;
+            width: 200px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            margin-top: 30px;
+            width: 80%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f9;
+        }
+
+        .like-btn {
+            background-color: #006f55;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        .like-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        .delete-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Shoutout Page</h2>
+        <form id="shoutoutForm">
+            <label for="shoutoutInput">Enter text:</label><br>
+            <input type="text" id="shoutoutInput" name="shoutoutInput" placeholder="Type something..." required><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <h3>Shoutouts:</h3>
+    <table id="shoutoutTable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Shoutout</th>
+                <th>Creation Time</th>
+                <th>Likes</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="shoutoutTableBody">
+            <!-- Shoutouts will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script src="app.js"></script> <!-- Linking to your JavaScript file -->
+
+</body>
+</html>
